@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-100);
+}
+
+:root {
+  --primary-100: #ff6600;
+  --primary-200: #ff983f;
+  --primary-300: #ffffa1;
+  --accent-100: #f5f5f5;
+  --accent-200: #929292;
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-100: #1d1f21;
+  --bg-200: #2c2e30;
+  --bg-300: #444648;
+}
+
+body {
+  background-color: var(--bg-100);
+}
+
+hr {
+  border: 2px solid var(--primary-200);
+}
+
+section h1 {
+  color: var(--primary-100);
+}
+
+header {
+  background-color: var(--bg-200);
+  padding: 1%;
+  color: var(--text-100);
+}
+
+.container-flex {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > .container-flex ul li {
+  display: inline;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+a {
+  color: var(--text-100);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li {
+  display: grid;
+  grid-template-columns: (4, 25%);
+}
+
+.sobre {
+  display: flex;
+  width: 100%;
+  column-gap: 2em;
+}
+
+.sobre img {
+  max-width: 420px;
+  width: 100%;
+  /* height: 100%; */
+  /* height: 280px; */
+}
+
+hr {
+  margin: 2em 0;
+}
+
+section {
+  margin: 4em 0;
+}
+
+.produtos ul {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  column-gap: 2%;
+  row-gap: 5%;
+}
+
+.produtos ul li img,
+.produtos ul li h3 {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.produtos ul li p {
+  max-height: 100%;
+  height: 3.5em;
+  margin-bottom: 1.5em;
+}
+
+.produtos ul li button {
+  height: 3.2em;
+  width: 100%;
+  /* height: 12%; */
+  border: none;
+  background-color: var(--primary-100);
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--bg-200);
+  margin-top: 1%;
+}
+
+@media screen and (max-width: 767px) {
+  header .container-flex {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 15;
+  }
+
+  header .container-flex h1 {
+    margin-top: 0.2em;
+  }
+
+  header > .container-flex ul {
+    margin-top: 1em;
+  }
+
+  header > .container-flex ul li {
+    padding: 0.5em;
+    font-size: 1em;
+  }
+
+  .container-flex {
+    max-width: 75%;
+  }
+
+  .sobre {
+    display: block;
+  }
+
+  .sobre h2 {
+    margin-top: 1em;
+  }
+
+  .sobre img {
+    max-width: 100%;
+  }
+
+  .produtos ul {
+    display: grid;
+    grid-template-columns: repeat(1, 99%);
+    row-gap: 2.8em;
+  }
+
+  footer {
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container-flex {
+    max-width: 85%;
+  }
+
+  .sobre {
+    display: block;
+  }
+
+  .sobre h2 {
+    margin-top: 1em;
+  }
+
+  .sobre img {
+    max-width: 100%;
+  }
+
+  .produtos ul {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    column-gap: 10%;
+    row-gap: 5%;
+  }
+
+  footer {
+    margin-top: 5.5em;
+  }
+}
